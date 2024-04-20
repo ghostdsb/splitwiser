@@ -1,5 +1,6 @@
-import { Body, Controller, Get, Post, Req } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
+import { IExpense } from './types';
 
 @Controller()
 export class AppController {
@@ -11,7 +12,7 @@ export class AppController {
   }
 
   @Post('/expense')
-  createNewExpense(@Body() bodyParams: Request): JSON{
+  createNewExpense(@Body() bodyParams: IExpense): JSON {
     return this.appService.createNewExpense(bodyParams);
   }
 }
