@@ -1,0 +1,57 @@
+meta {
+  name: new expense
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/expense
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "description": "pizza",
+    "cost": 100,
+    "participants": [
+      "user1",
+      "user2",
+      "user3",
+      "user4",
+      "user5"
+    ],
+    "paidBy": [
+      {
+        "userId": "user1",
+        "cost": 50
+      },
+      {
+        "userId": "user3",
+        "cost": 50
+      }
+    ],
+    "share": [
+      {
+        "userId": "user1",
+        "share": 0.2
+      },
+      {
+        "userId": "user2",
+        "share": 0.25
+      },
+      {
+        "userId": "user3",
+        "share": 0.15
+      },
+      {
+        "userId": "user4",
+        "share": 0.1
+      },
+      {
+        "userId": "user5",
+        "share": 0.3
+      }
+    ]
+  }
+}
