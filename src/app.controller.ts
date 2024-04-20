@@ -12,7 +12,7 @@ export class AppController {
   }
 
   @Post('/expense')
-  createNewExpense(@Body() bodyParams: IExpense): JSON {
+  createNewExpense(@Body() bodyParams: IExpense) {
     return this.appService.createNewExpense(bodyParams);
   }
 }

@@ -8,7 +8,7 @@ export class AppService {
     return 'pong';
   }
 
-  createNewExpense(bodyParams: IExpense): JSON {
+  createNewExpense(bodyParams: IExpense) {
     const ret = finalContribution(bodyParams);
     return ret;
   }
